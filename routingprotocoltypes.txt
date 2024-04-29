@@ -1,0 +1,26 @@
+Routing protocols can be split into main types:
+    -Interior gateway protocols(IGPs)
+    -Exterior gateway protocols(EGPs)
+
+Interior gateway protocols are used for routing within an organization
+    -All of the IGPs do the same job, which is to advertise routes within an organization and determine the best path or paths.
+    -An organization will typically pick one of the IGPs
+    -If an organization has multiple IGPs in effect information can be destributed between them. This should generally be avoided if possible.
+Exterior gateway protocols are used for routing between organizations over the internet.
+The only EGP in use today is BGP (Border Gateway Protocol)
+
+Interior gateway protocols can be split into two main types:
+    -Distance vector routing protocols
+        -In distance vector protocols, each router sends its directly connected neighbours a list of all its known networks along with its own distance to each of those networks.
+        -Distance vector routing protocols do not advertise the entire network topology.
+        -A router only knows its directly connected neighbours and the lists of networks those neighbours have advertised. It doesn't have detailed topology information beyond its directly connected neighbours.
+        -Distance vector routing protocols are often called 'Routing by rumour'
+            -Sometime RIP: Routing Information Protocol is used.
+            -Sometime EIGRP: Enhanced Interior Gateway Routing Protocol is used.
+    -Link State routing protocols
+        -In link state routing protocols each router describes itself and its interfaces to its directly connected neighbours
+        -This information is passed unchanged from router to another
+        -Every router learns the full picture of the network including every router, its interfaces and what they connect to
+            -Sometime OSPF: Open Shortest Path First is used.
+            -Sometime IS-IS: Intermediate System - Intermediate System is used.
+
