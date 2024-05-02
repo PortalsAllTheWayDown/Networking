@@ -1,0 +1,15 @@
+Connected Interface - 0
+Static Route - 1
+External BGP - 20
+EIGRP - 90
+OSPF - 110
+IS-IS - 115
+RIP - 120
+
+Administrative Distance is used to choose between multiple paths learned via different routing protocols.
+Metric is used to choose between multiple paths learned via the same protocol
+The administrative Distance is considered first to narrow the choise down to the single best routing protocol
+The metric is then considered to choose the best paths or paths which make it into the routing table.
+
+OSPF has a better AD than RIP so RIP routes will be discarded.
+

@@ -1,0 +1,53 @@
+TCP/UDP Port 21: FTP (File Transfer Protocol) 
+- Used for transferring files between a client and server on a network.
+
+TCP/UDP Port 22: SSH (Secure Shell) 
+- Provides secure remote access to a server over an encrypted connection.
+
+TCP/UDP Port 23: Telnet 
+- Provides remote access to a server or device, but it's less secure than SSH as data is transmitted in plaintext.
+
+TCP/UDP Port 25: SMTP (Simple Mail Transfer Protocol) 
+- Used for sending email messages between email servers.
+
+TCP/UDP Port 53: DNS (Domain Name System) 
+- Resolves domain names to IP addresses and vice versa.
+
+TCP/UDP Port 80: HTTP (Hypertext Transfer Protocol) 
+- Used for serving web pages and accessing websites.
+
+TCP/UDP Port 110: POP3 (Post Office Protocol version 3) 
+- Used for retrieving email messages from a mail server.
+
+TCP/UDP Port 143: IMAP (Internet Message Access Protocol) 
+- Used for accessing and managing email messages on a mail server.
+
+TCP/UDP Port 443: HTTPS (Hypertext Transfer Protocol Secure) 
+- Used for securely serving web pages and accessing websites over an encrypted connection.
+
+TCP Port 3389: RDP (Remote Desktop Protocol) 
+- Provides remote desktop access to Windows-based systems.
+
+UDP Port 161: SNMP (Simple Network Management Protocol) 
+- Used for monitoring and managing network devices and systems.
+
+TCP Port 389: LDAP (Lightweight Directory Access Protocol) 
+- Used for accessing and managing directory information services.
+
+TCP/UDP Port 445: SMB (Server Message Block) 
+- Used for file sharing, printer access, and other networking services on Windows systems.
+
+UDP Port 514: Syslog 
+- Used for logging system messages and events from network devices.
+
+TCP/UDP Port 123: NTP (Network Time Protocol) 
+- Synchronizes the time of day among a set of distributed time servers and clients.
+
+TCP/UDP Port 3306: MySQL 
+- Used for managing and accessing MySQL database servers.
+
+TCP/UDP Port 5432: PostgreSQL 
+- Used for managing and accessing PostgreSQL database servers.
+
+TCP/UDP Port 5900: VNC (Virtual Network Computing) 
+- Used for remote desktop access and control.

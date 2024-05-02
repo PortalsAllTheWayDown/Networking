@@ -1,0 +1,7 @@
+Equal Cost Multi Path
+
+-If  multiple path to a destination have an equal metric, the router will enter all of the paths into the routing table.
+-Equal Cost Multi Path will load balance the outbound traffic to the destination over the different paths.
+-All Interior gateway protocols(IGP) routing protocols will perform ECMP by default.
+-EIGRP is the only routing protocol which is capable of UnEqual Cost Multi Path. It must be manually configure to support this.
+

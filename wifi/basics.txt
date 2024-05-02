@@ -1,0 +1,44 @@
+Key Terms:
+    -SSID: The network "name" that you see when you try and connect.
+    -ESSID: An SSID that *may* apply to multiple access points, eg a company office, normally forming a bigger network. For Aircrack they normally refer to the network your attacking.
+    -BSSID: An access point MAC (hardware) address
+    -WPA2-PSK: Wifi networks that you connect to by providing a password that the same for everyone.
+    -WPA2-EAP: Wifi networks that you authenticate to by providing a username and password, which is sten to a RADIUS server.
+    -RADIUS: A server for authenticating clients, not just for wifi.
+
+The core of WPA(2) authentication is the 4 way handshake.
+
+Most home Wifi networks and many others user WPA(2) personal. If you have to log in with a password and it's not WEP, then its WPA(2) personal. WPA2-EAP uses RADIUS servers to authenticate, so if you have to enter a username and password in order to connect then its probably that.
+
+The 4 way handshake allows the client and the AP to both prove that they know the key, without telling each other. WPA and WPA2 use practically the same authentication method so the attacks on both are the same.
+
+The keys for WPA are derived from both the ESSID and the password for the network. The ESSID acts as a salt, making dictionary attacks more difficult. It means that for a given password the key will still vary for each access point. This means that unless you precompute the dictionary for just that access point/MAC address you will need to try password until you find the correct one.
+    -Brute Force
+Brute force cannot be used against WPA2-EAP handshakes
+
+Pre-Shared Key(psk) - key used in wifi protected accesss WPA and WPA2 security protocols for authenticating devices and encrypting data on wireless networks.
+
+The aircrack-ng suite consists of:
+    aircrack-ng
+    airdecap-ng
+    airmon-ng
+    aireplay-ng
+    airodump-ng
+    airtun-ng
+    packetforge-ng
+    airbase-ng
+    airdecloak-ng
+    airolib-ng
+    airserv-ng
+    buddy-ng
+    ivstools
+    easside-ng
+    tkiptun-ng
+    wesside-ng
+
+Well want to use aircrack-ng, airodump-ng and airmon-ng  to attack WPA networks.
+
+Kali has aircrack tools by default
+
+To run its important to have a network card that can go into monitor mode.
+
