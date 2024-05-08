@@ -1,0 +1,27 @@
+Access Layer:
+End hosts such as desktop computer, severs and IP phones connect into the network at the access layer.
+It is designed to have a high port count at an affordable cost.
+Desktops typically only have one network interface card so they connect into one switch or wireless access point.
+Servers will often have dual NICs and connect to a pair of redundant switches
+Client access security measures are enabled at the access layer.
+
+Distribution Layer:
+Access layer switches uplink to Distribution layer switches.
+The Distribution Layer switches serve as an aggregation point for the Access Layer and provide scalability.
+Distribution Layer switches are typically deployed in redundant pairs, with downstream Access Layer switches connected to both.
+End hosts are not typically connected here.
+Most software poilcy such as Qos is enabled at this layer.
+
+Core Layer:
+Distribution layer switches uplink to Core Layer switches.
+Core Layer switches are typically deployed in redundant pairs, with downstream Distribution Layer switches connected to both.
+Traffic between different parts of the campus travels through the core so it is designed for speed and resiliency.
+Software policy slows the switch down so should be avoided in the Core Layer.
+
+Router Operations:
+Routers operate at layer 3 of the osi stack
+Hosts in separate ip subnets must send traffic via a router to communicate
+security rules on routers or firewalls can be used to easily control what traffic is allowed between different ip subnets at layer 3
+routers do not forward broadcast traffic by default
+They provide performance and security by splitting networks into smaller domains at layer 3
+

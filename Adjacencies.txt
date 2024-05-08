@@ -1,0 +1,27 @@
+IGP routing protocols are configured under global configuration mode and then enabled on individual interfaces.
+When the routing protocol is enabled on an interface the router will look for other devices on the link which are also running the routing protocol.
+The router does this by sending out and listening for hello packets.
+When a matching peer is found, the routers form an adjacency with each other.
+They can exchange routing information.
+
+Modern routing protocols use multicast(In multicast communication, a single packet is sent from the sender to a specific multicast group address, and all the hosts that have joined that multicast group receive the packet.
+Here are some key points about multicast:
+    Efficient Data Transmission: Multicast transmission is more efficient than unicast transmission when the same data needs to be sent to multiple recipients. Instead of sending multiple copies of the same data, the data is sent once, and routers in the network replicate the data only to the networks that have subscribed to the multicast group.
+    Group Membership: Hosts that want to receive multicast traffic join a multicast group by subscribing to a specific multicast group address.
+    Protocol Support: Multicast is supported by many network protocols, including Internet Protocol (IP). IPv4 uses Class D IP addresses (in the range 224.0.0.0 to 239.255.255.255) for multicast communication, and IPv6 uses multicast addresses defined within the ff00::/8 range.
+    Applications: Multicast is commonly used for applications such as streaming media, online gaming, video conferencing, and software updates, where the same data needs to be sent to multiple recipients simultaneously.
+    Tree-Based Distribution: Multicast traffic is distributed within the network using a tree-based distribution mechanism, where routers in the network forward the multicast traffic only to the networks that have subscribed to the multicast group.
+    IGMP: The Internet Group Management Protocol (IGMP) is used by hosts to signal their interest in receiving multicast traffic. Routers use IGMP to learn which hosts are interested in receiving multicast traffic and to forward multicast packets only to the networks that have subscribed to the multicast group.) for the hello packets
+This is more efficient than broadcast which was used by earlier protocols
+Only routers which are running the same routing protocol will process the packet
+
+Passive Interfaces allow you to include an IP subnet in the oruting protocol without sending updates out of the interface.
+
+It is best practice to configure loopback interfaces as passive interfaces.
+It is impossible to form an adjacency on a loopback interface because they ttare not physical interfaces.
+Making the loopback passive means hta it will be advertisedtt by he routing protocol but it will not waste ersouces sending out and listening for hello packets.
+
+Passive interfaces are used on:
+    -loopback interfaces
+    -Physical interfaces where the device on the other side belongs to another organization. We do not want to send routing information out but we do want our internal devices to know about the link.
+
